@@ -81,6 +81,105 @@ Deletes a resource.
 
 ---
 
+## 📄 Response Attributes
+
+| Attribute | Description |
+|-----------|-------------|
+| `r.status_code` | HTTP status code |
+| `r.text` | Response as text |
+| `r.json()` | Response as JSON |
+| `r.headers` | Response headers |
+| `r.cookies` | Cookies sent by server |
+| `r.url` | Final URL |
+
+---
+
+## 📨 Sending Parameters
+
+```python
+params = {
+    "name": "John",
+    "age": 20
+}
+
+r = requests.get("https://httpbin.org/get", params=params)
+```
+
+---
+
+## 📤 Sending Form Data
+
+```python
+data = {
+    "username": "admin",
+    "password": "1234"
+}
+
+requests.post("https://httpbin.org/post", data=data)
+```
+
+---
+
+## 📦 Sending JSON Data
+
+```python
+data = {
+    "name": "John",
+    "age": 20
+}
+
+requests.post("https://httpbin.org/post", json=data)
+```
+
+---
+
+## 📑 Custom Headers
+
+```python
+headers = {
+    "User-Agent": "MyPythonScript"
+}
+
+requests.get("https://httpbin.org/get", headers=headers)
+```
+
+---
+
+## 🍪 Cookies
+
+```python
+cookies = {
+    "session": "abc123"
+}
+
+requests.get("https://httpbin.org/cookies", cookies=cookies)
+```
+
+---
+
+## ⏳ Timeout
+
+```python
+requests.get("https://httpbin.org/delay/10", timeout=5)
+```
+
+Raises an exception if the server doesn't respond within 5 seconds.
+
+---
+
+## ⚠️ Exception Handling
+
+```python
+import requests
+
+try:
+    r = requests.get("https://httpbin.org/get", timeout=5)
+except requests.exceptions.RequestException as e:
+    print(e)
+```
+
+---
+
 ## 📝 Common HTTP Status Codes
 
 | Code | Meaning |
