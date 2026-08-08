@@ -7,3 +7,4 @@ A collection of Python modules that I'm learning through hands-on practice. This
 - 🛤️ [Pathlib Module](02-pathlib) — Object-oriented file and path handling.
 - ⚙️ [Subprocess Module](03-subprocess) — Run and manage external system commands.
 - 🌐 [Requests Module](04-requests) — Send HTTP requests and interact with web APIs.
+- 📝 [Logging Module](05-logging) — Record and manage events, errors, and messages in Python programs.
